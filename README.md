@@ -2,6 +2,10 @@
 
 查看[什么值得买](http://www.smzdm.com)上的最新优惠信息。
 
+## download
+
+[v0.0.1](https://github.com/cdpath/alfred-smzdm-workflow/releases/download/0.0.1/smzdm.alfredworkflow)
+
 ## changelog
 
 - 2022-07-17: 改用 [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/)
