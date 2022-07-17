@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>me.chenglei.smzdm</string>
+	<string>blog.jingyi.zdm</string>
+	<key>category</key>
+	<string>Internet</string>
 	<key>connections</key>
 	<dict>
 		<key>31F0E18F-873C-4133-B462-3A2B9E7F6CFB</key>
@@ -15,13 +17,15 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>dlutcat</string>
+	<string>jingyi</string>
 	<key>description</key>
-	<string>查看什么值得买（www.smzdm.com）上的最新优惠信息。</string>
+	<string></string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -31,25 +35,50 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
 				<string>zdm</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
 				<key>runningsubtext</key>
 				<string>Fetching…</string>
 				<key>script</key>
-				<string>from zdm import get_items
+				<string>import json
+import sys
 
-uri = 'http://feed.smzdm.com/'
-print(get_items(uri))</string>
+from zdm import get_items
+
+uri = 'http://www.smzdm.com/json_more?timesort=220212735313'
+res = get_items(uri)
+sys.stdout.write(res)
+</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>获取smzdm最新优惠</string>
 				<key>title</key>
 				<string>smzdm</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -57,39 +86,57 @@ print(get_items(uri))</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>31F0E18F-873C-4133-B462-3A2B9E7F6CFB</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
 				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
 				<key>url</key>
 				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>908C3AE6-E7D7-41A6-9034-65930D488BB8</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>张大妈最新优惠</string>
 	<key>uidata</key>
 	<dict>
 		<key>31F0E18F-873C-4133-B462-3A2B9E7F6CFB</key>
 		<dict>
+			<key>xpos</key>
+			<real>300</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>15</real>
 		</dict>
 		<key>908C3AE6-E7D7-41A6-9034-65930D488BB8</key>
 		<dict>
+			<key>xpos</key>
+			<real>500</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>15</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.0.1</string>
 	<key>webaddress</key>
-	<string>http://chenglei.me</string>
+	<string>https://jingyi.blog</string>
 </dict>
 </plist>
